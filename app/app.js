@@ -66,5 +66,19 @@ angular
       $state.go('continuous-delivery', { slide: event.indexh }, { notify: false })
     })
   })
+  .controller('Kafka', ($scope, $state, config) => {
+    $scope.title = 'Apache Kafka on Heroku'
+
+    let reveal = new Reveal(config.reveal)
+
+    reveal.setCurrentSlide($state.params.slide)
+    reveal.addEventListener('slidechanged', (event) => {
+      if (reveal.isLastSlide()) {
+        setTimeout(function() { reveal.setCurrentSlide(0) }, 8000)
+      }
+
+      $state.go('kafka', { slide: event.indexh }, { notify: false })
+    })
+  })
   .config(routes)
   .constant('config', config)

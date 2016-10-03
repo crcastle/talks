@@ -36,6 +36,12 @@ let routes = ($stateProvider, $urlRouterProvider) => {
     controller: 'ContinuousDelivery'
   })
 
+  $stateProvider.state('kafka', {
+    url: '/kafka/*slide',
+    templateUrl: '/talks/kafka/deck.html',
+    controller: 'Kafka'
+  })
+
   $urlRouterProvider.otherwise('/')
 }
 
