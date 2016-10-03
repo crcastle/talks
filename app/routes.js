@@ -30,6 +30,12 @@ let routes = ($stateProvider, $urlRouterProvider) => {
     controller: 'PreRoll'
   })
 
+  $stateProvider.state('continuous-delivery', {
+    url: '/continuous-delivery/*slide',
+    templateUrl: '/talks/continuous-delivery/deck.html',
+    controller: 'ContinuousDelivery'
+  })
+
   $urlRouterProvider.otherwise('/')
 }
 
