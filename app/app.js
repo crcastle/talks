@@ -60,7 +60,7 @@ angular
     reveal.setCurrentSlide($state.params.slide)
     reveal.addEventListener('slidechanged', (event) => {
       if (reveal.isLastSlide()) {
-        setTimeout(function() { reveal.setCurrentSlide(0) }, 8000)
+        // setTimeout(function() { reveal.setCurrentSlide(0) }, 8000)
       }
 
       $state.go('kafka-pre-roll', { slide: event.indexh }, { notify: false })
