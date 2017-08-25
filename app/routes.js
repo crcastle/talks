@@ -30,6 +30,12 @@ let routes = ($stateProvider, $urlRouterProvider) => {
     controller: 'PreRoll'
   })
 
+  $stateProvider.state('kafka-pre-roll', {
+    url: '/kafka-pre-roll/*slide',
+    templateUrl: '/talks/kafka-pre-roll/deck.html',
+    controller: 'KafkaPreRoll'
+  })
+
   $urlRouterProvider.otherwise('/')
 }
 
